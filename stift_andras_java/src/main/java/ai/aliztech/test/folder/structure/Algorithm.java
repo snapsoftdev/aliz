@@ -28,7 +28,6 @@ public class Algorithm {
                     subPath = subPath.substring(1);
                 }
                 leaf = !subPath.contains("/");
-
                 String nextFolderPart = leaf ? subPath : getNextFolderName(subPath);
                 String absPathAtLevel = "/".equals(temp.getAbsolutePath()) ? "/" + nextFolderPart : temp.getAbsolutePath() + "/" + nextFolderPart;
 
@@ -44,7 +43,6 @@ public class Algorithm {
                     temp.setStatus(status);
                 }
             } else {
-                // create new child
                 throw new IllegalStateException("Unknown state");
             }
         }
